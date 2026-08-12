@@ -1,0 +1,348 @@
+﻿/* =========================================================
+   EXPLORADORES DEL POLO
+   PANTALLA 0
+========================================================= */
+
+.intro-screen {
+
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+
+  overflow: hidden;
+
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+.intro-container {
+
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+}
+
+
+/* =========================================================
+   BOTÓN
+========================================================= */
+
+.intro-start-button {
+
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: min(230px, 48vw);
+  aspect-ratio: 1 / 1;
+
+  transform:
+    translate(-50%, -50%);
+
+  padding: 0;
+
+  border-radius: 50%;
+
+  border:
+    7px solid white;
+
+  outline:
+    3px solid
+    rgba(130,180,30,.45);
+
+  background:
+    radial-gradient(
+      circle at 35% 25%,
+      #edff76 0%,
+      #d0f22a 25%,
+      #a5d91a 55%,
+      #72b20f 100%
+    );
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  box-shadow:
+
+    0 0 0 6px
+    rgba(255,255,255,.45),
+
+    0 9px 0
+    #5d9210,
+
+    0 20px 35px
+    rgba(55,90,20,.28),
+
+    0 0 45px
+    rgba(190,240,40,.75);
+
+  animation:
+    botonEntrada .7s ease-out both,
+    botonPulso 3s 1s ease-in-out infinite;
+
+  transition:
+    transform .15s ease;
+
+  -webkit-tap-highlight-color:
+    transparent;
+
+}
+
+
+/* =========================================================
+   ENTRADA
+========================================================= */
+
+@keyframes botonEntrada {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translate(-50%, -50%)
+      scale(.7);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translate(-50%, -50%)
+      scale(1);
+
+  }
+
+}
+
+
+/* =========================================================
+   PULSO
+========================================================= */
+
+@keyframes botonPulso {
+
+  0%,
+  100% {
+
+    box-shadow:
+
+      0 0 0 6px
+      rgba(255,255,255,.45),
+
+      0 9px 0
+      #5d9210,
+
+      0 20px 35px
+      rgba(55,90,20,.28),
+
+      0 0 40px
+      rgba(190,240,40,.55);
+
+  }
+
+  50% {
+
+    box-shadow:
+
+      0 0 0 9px
+      rgba(255,255,255,.5),
+
+      0 9px 0
+      #5d9210,
+
+      0 22px 40px
+      rgba(55,90,20,.3),
+
+      0 0 65px
+      rgba(210,250,50,.9);
+
+  }
+
+}
+
+
+/* =========================================================
+   BRILLO
+========================================================= */
+
+.button-shine {
+
+  position: absolute;
+
+  top: 8%;
+  left: 17%;
+
+  width: 66%;
+  height: 35%;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.7),
+      rgba(255,255,255,0)
+    );
+
+  transform:
+    rotate(-8deg);
+
+  pointer-events: none;
+
+}
+
+
+/* =========================================================
+   TEXTO
+========================================================= */
+
+.button-text {
+
+  position: relative;
+
+  z-index: 5;
+
+  color: white;
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size:
+    clamp(27px, 7vw, 42px);
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  text-shadow:
+    0 3px 4px
+    rgba(50,80,10,.35);
+
+}
+
+
+/* =========================================================
+   RAYOS
+========================================================= */
+
+.button-rays {
+
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+
+}
+
+
+.button-rays i {
+
+  position: absolute;
+
+  width: 7px;
+  height: 22px;
+
+  border-radius: 10px;
+
+  background: white;
+
+}
+
+
+.button-rays i:nth-child(1) {
+
+  top: 16%;
+  left: calc(50% - 3px);
+
+}
+
+
+.button-rays i:nth-child(2) {
+
+  bottom: 16%;
+  left: calc(50% - 3px);
+
+}
+
+
+.button-rays i:nth-child(3) {
+
+  left: 16%;
+  top: calc(50% - 3px);
+
+  transform:
+    rotate(90deg);
+
+}
+
+
+.button-rays i:nth-child(4) {
+
+  right: 16%;
+  top: calc(50% - 3px);
+
+  transform:
+    rotate(90deg);
+
+}
+
+
+/* =========================================================
+   INTERACCIÓN
+========================================================= */
+
+.intro-start-button:hover {
+
+  transform:
+    translate(-50%, -50%)
+    scale(1.04);
+
+}
+
+
+.intro-start-button:active {
+
+  transform:
+    translate(-50%, -50%)
+    scale(.93);
+
+}
+
+
+/* =========================================================
+   CELULAR
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .intro-start-button {
+
+    width:
+      min(
+        220px,
+        50vw
+      );
+
+  }
+
+}
