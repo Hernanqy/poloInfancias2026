@@ -3410,3 +3410,77 @@ input {
 
 }
 
+
+/* =====================================================
+   ESTACIÓN FAUNA 2
+===================================================== */
+
+.fauna2-ejemplos {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 9px;
+
+  margin:
+    0 auto 18px;
+
+  width: 100%;
+
+}
+
+
+.fauna2-ejemplos div {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding:
+    11px 14px;
+
+  border-radius: 14px;
+
+  background: #eef7df;
+
+  color: #245b39;
+
+  font-size: 15px;
+
+  text-align: left;
+
+}
+
+
+.fauna2-ejemplos div:first-child {
+
+  border-left:
+    5px solid #78a92a;
+
+}
+
+
+.fauna2-ejemplos div:last-child {
+
+  border-left:
+    5px solid #e87527;
+
+}
+
+
+.fauna2-ejemplos span {
+
+  flex: 1;
+
+}
+
+
+.fauna2-ejemplos strong {
+
+  color: #174d36;
+
+}
+
