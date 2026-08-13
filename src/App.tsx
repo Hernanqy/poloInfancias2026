@@ -66,7 +66,7 @@ const stations: Station[] = [
     qrCode: 'POLO:ESTACION:FAUNA1',
     description:
       'Buscá los animales en la lámina y marcalos. ¿Podés encontrarlos a todos?',
-    audio: '/audio/fauna1.mp3',
+    audio: '/audio/fauna_diferencias.mp3',
   },
   {
     id: 'fauna2',
