@@ -1,12 +1,12 @@
-﻿interface EstacionIngenioProps {
+﻿interface EstacionMegafaunaProps {
   onJugar?: () => void;
   onVolver?: () => void;
 }
 
-export default function EstacionIngenio({
+export default function EstacionMegafauna({
   onJugar,
   onVolver
-}: EstacionIngenioProps) {
+}: EstacionMegafaunaProps) {
 
   return (
 
@@ -19,23 +19,27 @@ export default function EstacionIngenio({
         </div>
 
         <h1>
-          INGENIO
+          MEGAFAUNA
         </h1>
 
         <img
-          src="/images/estaciones/estacion_ingenio.png"
-          alt="Estación Ingenio"
+          src="/images/estaciones/estacion_mega.png"
+          alt="Estación Megafauna"
           className="estacion-image"
         />
 
         <h2>
-          Desafío con fósforos
+          Palabras del pasado
         </h2>
 
         <p className="estacion-description">
-          Observá la disposición de los fósforos y pensá con ingenio.
-          Mové o quitá la cantidad indicada para lograr una forma
-          o número específico.
+          Recibí un alfabeto especial en el que cada letra
+          está representada por un código o ícono prehistórico.
+        </p>
+
+        <p className="estacion-description">
+          Usá el alfabeto para decodificar una tarjeta
+          y descubrir la palabra oculta.
         </p>
 
 
@@ -45,7 +49,7 @@ export default function EstacionIngenio({
           onClick={() => {
 
             const audio =
-              new Audio("/audio/ingenio.mp3");
+              new Audio("/audio/megafauna.mp3");
 
             audio.play();
 
@@ -60,6 +64,7 @@ export default function EstacionIngenio({
           type="button"
           onClick={onJugar}
         >
+
           <span>🎮</span>
 
           <strong>
@@ -69,6 +74,7 @@ export default function EstacionIngenio({
           <span>
             →
           </span>
+
         </button>
 
 

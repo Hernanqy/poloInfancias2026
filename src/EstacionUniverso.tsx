@@ -1,6 +1,4 @@
-﻿import React from "react";
-
-interface EstacionUniversoProps {
+﻿interface EstacionUniversoProps {
   onJugar?: () => void;
   onVolver?: () => void;
 }
@@ -101,3 +99,4 @@ export default function EstacionUniverso({
 
   );
 }
+
