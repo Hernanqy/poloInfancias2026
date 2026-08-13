@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Html5Qrcode } from 'html5-qrcode'
 import './index.css'
 
@@ -22,55 +22,55 @@ type Station = {
 const stations: Station[] = [
   {
     id: 'ingenio',
-    name: 'EstaciÃ³n Ingenio',
+    name: 'Estación Ingenio',
     shortName: 'INGENIO',
     image: '/images/estaciones/estacion_ingenio.png',
     gameImage: '/images/juegos/juego_ingenio.png',
     color: '#23816b',
     qrCode: 'POLO:ESTACION:INGENIO',
     description:
-      'PonÃ© a prueba tu ingenio y descubrÃ­ cÃ³mo encontrar soluciones jugando.',
+      'Poné a prueba tu ingenio y descubrí cómo encontrar soluciones jugando.',
     audio: '/audio/ingenio.mp3',
   },
   {
     id: 'ecoregion',
-    name: 'EstaciÃ³n EcorregiÃ³n',
-    shortName: 'ECOREGIÃ“N',
+    name: 'Estación Ecorregión',
+    shortName: 'ECOREGIÓN',
     image: '/images/estaciones/estacion_ecoregion.png',
     gameImage: '/images/juegos/juego_ecoregion.png',
     color: '#659c28',
     qrCode: 'POLO:ESTACION:ECOREGION',
     description:
-      'EncontrÃ¡ las diferencias y descubrÃ­ cuÃ¡nto podÃ©s observar de nuestro ambiente.',
+      'Encontrá las diferencias y descubrí cuánto podés observar de nuestro ambiente.',
     audio: '/audio/fauna_diferencias.mp3',
   },
   {
     id: 'megafauna',
-    name: 'EstaciÃ³n Megafauna',
+    name: 'Estación Megafauna',
     shortName: 'MEGAFAUNA',
     image: '/images/estaciones/estacion_mega.png',
     gameImage: '/images/juegos/juego_megafauna.png',
     color: '#d48a1b',
     qrCode: 'POLO:ESTACION:MEGAFAUNA',
     description:
-      'DescubrÃ­ las palabras codificadas y viajÃ¡ al pasado para conocer la megafauna.',
+      'Descubrí las palabras codificadas y viajá al pasado para conocer la megafauna.',
     audio: '/audio/codigo.mp3',
   },
   {
     id: 'fauna1',
-    name: 'EstaciÃ³n Fauna',
+    name: 'Estación Fauna',
     shortName: 'FAUNA',
     image: '/images/estaciones/estacion_fauna.png',
     gameImage: '/images/juegos/juego_fauna1.png',
     color: '#7fa72a',
     qrCode: 'POLO:ESTACION:FAUNA1',
     description:
-      'BuscÃ¡ los animales en la lÃ¡mina y marcalos. Â¿PodÃ©s encontrarlos a todos?',
+      'Buscá los animales en la lámina y marcalos. ¿Podés encontrarlos a todos?',
     audio: '/audio/fauna1.mp3',
   },
   {
     id: 'fauna2',
-    name: 'EstaciÃ³n Fauna 2',
+    name: 'Estación Fauna 2',
     shortName: 'FAUNA',
     image: '/images/estaciones/estacion_fauna.png',
     gameImage: '/images/juegos/juego_fauna2.png',
@@ -82,25 +82,25 @@ const stations: Station[] = [
   },
   {
     id: 'rompecabezas',
-    name: 'EstaciÃ³n Rompecabezas',
+    name: 'Estación Rompecabezas',
     shortName: 'ROMPECABEZAS',
     image: '/images/estaciones/estacion_fauna.png',
     gameImage: '/images/juegos/juego_fauna2.png',
     color: '#4d8b5b',
     qrCode: 'POLO:ESTACION:ROMPECABEZAS',
     description:
-      'ArmÃ¡ el rompecabezas pieza por pieza y descubrÃ­ quÃ© animal se esconde en la imagen. Â¡ObservÃ¡, pensÃ¡ y completalo!',
+      'Armá el rompecabezas pieza por pieza y descubrí qué animal se esconde en la imagen. ¡Observá, pensá y completalo!',
     audio: '/audio/rompecabeza.mp3',
   },  {
     id: 'universo',
-    name: 'EstaciÃ³n Universo',
+    name: 'Estación Universo',
     shortName: 'UNIVERSO',
     image: '/images/estaciones/estacion_universo.png',
     gameImage: '/images/juegos/juego_universo.png',
     color: '#315e9b',
     qrCode: 'POLO:ESTACION:UNIVERSO',
     description:
-      'MemorizÃ¡, observÃ¡ y descubrÃ­ algunos de los secretos del Universo.',
+      'Memorizá, observá y descubrí algunos de los secretos del Universo.',
     audio: '/audio/memo.mp3',
   },
 ]
@@ -160,21 +160,16 @@ function App() {
   const [scannerMessage,
     setScannerMessage] =
     useState(
-      'ApuntÃ¡ la cÃ¡mara al cÃ³digo QR'
+      'Apuntá la cámara al código QR'
     )
 
   const scannerRef =
     useRef<Html5Qrcode | null>(null)
 
-  // Audio de estaciÃ³n: se mantiene una Ãºnica instancia
-  // para evitar problemas de reproducciÃ³n en mÃ³viles/PWA.
-  const stationAudioRef =
-    useRef<HTMLAudioElement | null>(null)
-
 
   /*
     ==========================================
-    PANTALLA 0 â€” INICIO
+    PANTALLA 0 — INICIO
     ==========================================
   */
 
@@ -231,7 +226,7 @@ function App() {
 
   /*
     ==========================================
-    ABRIR ESTACIÃ“N
+    ABRIR ESTACIÓN
     ==========================================
   */
 
@@ -276,7 +271,7 @@ function App() {
 
   /*
     ==========================================
-    DETENER ESCÃNER
+    DETENER ESCÁNER
     ==========================================
   */
 
@@ -347,7 +342,7 @@ function App() {
           ) {
 
             setScannerMessage(
-              'Primero deben realizar al menos una estaciÃ³n.'
+              'Primero deben realizar al menos una estación.'
             )
 
             setScreen('scanner')
@@ -394,7 +389,7 @@ function App() {
         ) {
 
           setScannerMessage(
-            'Primero deben realizar al menos una estaciÃ³n.'
+            'Primero deben realizar al menos una estación.'
           )
 
           setScreen('scanner')
@@ -433,7 +428,7 @@ function App() {
 
   /*
     ==========================================
-    CÃMARA
+    CÁMARA
     ==========================================
   */
 
@@ -489,7 +484,7 @@ function App() {
           if (!cancelled) {
 
             setScannerMessage(
-              'No se pudo acceder a la cÃ¡mara. RevisÃ¡ los permisos.'
+              'No se pudo acceder a la cámara. Revisá los permisos.'
             )
 
           }
@@ -511,7 +506,7 @@ function App() {
 
   /*
     ==========================================
-    AUDIO DE ESTACIÃ“N
+    AUDIO DE ESTACIÓN
     ==========================================
   */
 
@@ -521,29 +516,17 @@ function App() {
       return
 
     const audio =
-      stationAudioRef.current
+      new Audio(
+        selectedStation.audio
+      )
 
-    if (!audio)
-      return
+    audio.play().catch(() => {
 
-    // Reinicia el audio desde el comienzo cada vez que
-    // se presiona el botÃ³n.
-    audio.currentTime = 0
+      alert(
+        'Tocá nuevamente el botón para reproducir el audio.'
+      )
 
-    const playPromise =
-      audio.play()
-
-    if (playPromise !== undefined) {
-
-      playPromise.catch(() => {
-
-        alert(
-          'No se pudo reproducir el audio. TocÃ¡ nuevamente el botÃ³n.'
-        )
-
-      })
-
-    }
+    })
   }
 
 
@@ -572,7 +555,7 @@ function App() {
           <button
             className="intro-start-button"
             onClick={startExperience}
-            aria-label="Iniciar exploraciÃ³n"
+            aria-label="Iniciar exploración"
           >
 
             <span className="button-shine"></span>
@@ -633,7 +616,7 @@ function App() {
           >
 
             <span className="sr-only">
-              Comenzar la exploraciÃ³n
+              Comenzar la exploración
             </span>
 
           </button>
@@ -662,15 +645,15 @@ function App() {
         <section className="explorers-container">
 
           <div className="section-icon">
-            ðŸ§­
+            🧭
           </div>
 
           <div className="section-label">
-            DÃA DE LAS INFANCIAS
+            DÍA DE LAS INFANCIAS
           </div>
 
           <h1>
-            Â¿QUIÃ‰NES VAN A
+            ¿QUIÉNES VAN A
             <span>
               EXPLORAR?
             </span>
@@ -712,7 +695,7 @@ function App() {
                       )
                     }
                   >
-                    Ã—
+                    ×
                   </button>
 
                 </div>
@@ -775,7 +758,7 @@ function App() {
             >
               CONTINUAR
               <span>
-                â†’
+                →
               </span>
             </button>
 
@@ -790,7 +773,7 @@ function App() {
 
   /*
     ==========================================
-    ESCÃNER
+    ESCÁNER
     ==========================================
   */
 
@@ -818,14 +801,14 @@ function App() {
               }
             }
           >
-            â† VOLVER
+            ← VOLVER
           </button>
 
 
           <div className="scanner-title">
 
             <span>
-              ðŸ“·
+              📷
             </span>
 
             <div>
@@ -835,7 +818,7 @@ function App() {
               </small>
 
               <h1>
-                ESCANEÃ EL QR
+                ESCANEÁ EL QR
               </h1>
 
             </div>
@@ -866,7 +849,7 @@ function App() {
 
   /*
     ==========================================
-    ESTACIÃ“N
+    ESTACIÓN
     ==========================================
   */
 
@@ -892,7 +875,7 @@ function App() {
           <div className="station-header">
 
             <span>
-              ESTACIÃ“N
+              ESTACIÓN
             </span>
 
             <h1>
@@ -924,12 +907,6 @@ function App() {
           />
 
 
-          <audio
-            ref={stationAudioRef}
-            src={selectedStation.audio}
-            preload="auto"
-          />
-
           <div className="station-content">
 
             <h2>
@@ -947,9 +924,9 @@ function App() {
                 playAudio
               }
             >
-              ðŸ”Š
+              🔊
               <span>
-                ESCUCHAR EXPLICACIÃ“N
+                ESCUCHAR EXPLICACIÓN
               </span>
             </button>
 
@@ -961,14 +938,14 @@ function App() {
               }
             >
 
-              ðŸŽ®
+              🎮
 
               <span>
                 IR A JUGAR
               </span>
 
               <strong>
-                â†’
+                →
               </strong>
 
             </button>
@@ -1010,7 +987,7 @@ function App() {
           <div className="game-header">
 
             <span>
-              DESAFÃO
+              DESAFÍO
             </span>
 
             <h1>
@@ -1023,11 +1000,11 @@ function App() {
           <div className="game-placeholder">
 
             <div className="game-placeholder-icon">
-              ðŸŽ®
+              🎮
             </div>
 
             <h2>
-              Â¡A JUGAR!
+              ¡A JUGAR!
             </h2>
 
             <p>
@@ -1035,7 +1012,7 @@ function App() {
             </p>
 
             <small>
-              El desafÃ­o se realiza
+              El desafío se realiza
               en la mesa de juegos.
             </small>
 
@@ -1050,7 +1027,7 @@ function App() {
               )
             }
           >
-            âœ“ TERMINÃ‰ EL DESAFÃO
+            ✓ TERMINÉ EL DESAFÍO
           </button>
 
 
@@ -1062,7 +1039,7 @@ function App() {
               )
             }
           >
-            â† VOLVER A LA ESTACIÃ“N
+            ← VOLVER A LA ESTACIÓN
           </button>
 
         </div>
@@ -1089,15 +1066,15 @@ function App() {
         <div className="final-container">
 
           <div className="final-confetti">
-            ðŸŽ‰
+            🎉
           </div>
 
           <div className="final-label">
-            Â¡MISIÃ“N CUMPLIDA!
+            ¡MISIÓN CUMPLIDA!
           </div>
 
           <h1>
-            Â¡FELICITACIONES,
+            ¡FELICITACIONES,
             <span>
               EXPLORADORES!
             </span>
@@ -1108,7 +1085,7 @@ function App() {
             {completedStations.length}{' '}
             {
               completedStations.length === 1
-                ? 'estaciÃ³n'
+                ? 'estación'
                 : 'estaciones'
             }.
           </p>
@@ -1125,7 +1102,7 @@ function App() {
                 >
 
                   <div className="credential-top">
-                    ðŸ§­
+                    🧭
                   </div>
 
                   <div className="credential-label">
@@ -1141,15 +1118,15 @@ function App() {
                   </div>
 
                   <div className="credential-divider">
-                    âœ¦
+                    ✦
                   </div>
 
                   <div className="credential-event">
-                    DÃA DE LAS INFANCIAS
+                    DÍA DE LAS INFANCIAS
                   </div>
 
                   <div className="credential-brand">
-                    LA MÃXIMA
+                    LA MÁXIMA
                   </div>
 
                 </div>
@@ -1180,7 +1157,7 @@ function App() {
 
             }}
           >
-            NUEVA EXPEDICIÃ“N
+            NUEVA EXPEDICIÓN
           </button>
 
         </div>
@@ -1209,7 +1186,7 @@ function App() {
           </div>
 
           <h1>
-            Â¡A EXPLORAR!
+            ¡A EXPLORAR!
           </h1>
 
         </div>
@@ -1237,13 +1214,13 @@ function App() {
       <section className="mission-message">
 
         <div className="mission-icon">
-          ðŸ—ºï¸
+          🗺️
         </div>
 
         <div>
 
           <strong>
-            ElegÃ­ cualquier estaciÃ³n
+            Elegí cualquier estación
           </strong>
 
           <p>
@@ -1323,7 +1300,7 @@ function App() {
                   {completed && (
 
                     <div className="completed-badge">
-                      âœ“
+                      ✓
                     </div>
 
                   )}
@@ -1346,7 +1323,7 @@ function App() {
                     onClick={() => {
 
                       setScannerMessage(
-                        'ApuntÃ¡ la cÃ¡mara al QR de la estaciÃ³n'
+                        'Apuntá la cámara al QR de la estación'
                       )
 
                       setScreen(
@@ -1355,7 +1332,7 @@ function App() {
 
                     }}
                   >
-                    ðŸ“· ESCANEAR QR
+                    📷 ESCANEAR QR
                   </button>
 
                 </div>
@@ -1372,18 +1349,18 @@ function App() {
       <section className="final-qr-section">
 
         <div className="final-qr-icon">
-          ðŸ†
+          🏆
         </div>
 
         <div>
 
           <strong>
-            Â¿TERMINAR LA EXPEDICIÃ“N?
+            ¿TERMINAR LA EXPEDICIÓN?
           </strong>
 
           <p>
             Cuando hayan jugado al menos
-            una estaciÃ³n, escaneen el QR final.
+            una estación, escaneen el QR final.
           </p>
 
         </div>
@@ -1394,7 +1371,7 @@ function App() {
           onClick={() => {
 
             setScannerMessage(
-              'ApuntÃ¡ la cÃ¡mara al QR FINAL'
+              'Apuntá la cámara al QR FINAL'
             )
 
             setScreen(
@@ -1403,7 +1380,7 @@ function App() {
 
           }}
         >
-          ðŸ“· QR FINAL
+          📷 QR FINAL
         </button>
 
       </section>
@@ -1413,7 +1390,6 @@ function App() {
 }
 
 export default App
-
 
 
 
