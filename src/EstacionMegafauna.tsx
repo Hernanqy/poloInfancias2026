@@ -49,7 +49,7 @@ export default function EstacionMegafauna({
           onClick={() => {
 
             const audio =
-              new Audio("/audio/megafauna.mp3");
+              new Audio("/audio/codigo.mp3");
 
             audio.play();
 
@@ -96,4 +96,5 @@ export default function EstacionMegafauna({
 
   );
 }
+
 
