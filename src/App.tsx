@@ -77,7 +77,7 @@ const stations: Station[] = [
     color: '#4d8b5b',
     qrCode: 'POLO:ESTACION:FAUNA2',
     description:
-      'BuscÃ¡ los animales en la lÃ¡mina. PrestÃ¡ mucha atenciÃ³n: te vamos a pedir que encuentres determinados animales y cantidades. Â¿PodÃ©s encontrarlos a todos?',
+      'Busc\u00e1 los animales en la l\u00e1mina. Prest\u00e1 mucha atenci\u00f3n: te vamos a pedir que encuentres determinados animales y cantidades. \u00bfPod\u00e9s encontrarlos a todos?',
     audio: '/audio/fauna_2.mp3',
   },
   {
