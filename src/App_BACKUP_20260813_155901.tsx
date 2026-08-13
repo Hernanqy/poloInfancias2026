@@ -166,11 +166,6 @@ function App() {
   const scannerRef =
     useRef<Html5Qrcode | null>(null)
 
-  // Audio de estación: se mantiene una única instancia
-  // para evitar problemas de reproducción en móviles/PWA.
-  const stationAudioRef =
-    useRef<HTMLAudioElement | null>(null)
-
 
   /*
     ==========================================
@@ -521,29 +516,17 @@ function App() {
       return
 
     const audio =
-      stationAudioRef.current
+      new Audio(
+        selectedStation.audio
+      )
 
-    if (!audio)
-      return
+    audio.play().catch(() => {
 
-    // Reinicia el audio desde el comienzo cada vez que
-    // se presiona el botón.
-    audio.currentTime = 0
+      alert(
+        'Tocá nuevamente el botón para reproducir el audio.'
+      )
 
-    const playPromise =
-      audio.play()
-
-    if (playPromise !== undefined) {
-
-      playPromise.catch(() => {
-
-        alert(
-          'No se pudo reproducir el audio. Tocá nuevamente el botón.'
-        )
-
-      })
-
-    }
+    })
   }
 
 
@@ -923,12 +906,6 @@ function App() {
             }
           />
 
-
-          <audio
-            ref={stationAudioRef}
-            src={selectedStation.audio}
-            preload="auto"
-          />
 
           <div className="station-content">
 
